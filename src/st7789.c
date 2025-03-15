@@ -9,7 +9,7 @@
 
 #include "hardware/gpio.h"
 #include "pico/stdlib.h"
-#include "pico/st7789.h"
+#include "include/pico/st7789.h"
 
 static struct st7789_config st7789_cfg;
 static uint16_t st7789_width;

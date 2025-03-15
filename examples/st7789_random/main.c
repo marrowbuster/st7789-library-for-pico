@@ -12,17 +12,17 @@
 
 // lcd configuration
 const struct st7789_config lcd_config = {
-    .spi      = PICO_DEFAULT_SPI,
-    .gpio_din = PICO_DEFAULT_SPI_TX_PIN,
-    .gpio_clk = PICO_DEFAULT_SPI_SCK_PIN,
-    .gpio_cs  = PICO_DEFAULT_SPI_CSN_PIN,
-    .gpio_dc  = 20,
-    .gpio_rst = 21,
-    .gpio_bl  = 22,
+    .spi      = SPI_INSTANCE(1),
+    .gpio_din = 11,
+    .gpio_clk = 10,
+    .gpio_cs  = 9,
+    .gpio_dc  = 8,
+    .gpio_rst = 12,
+    .gpio_bl  = 13,
 };
 
-const int LCD_WIDTH = 240;
-const int LCD_HEIGHT = 320;
+#define LCD_WIDTH  240
+#define LCD_HEIGHT 240
 
 int main()
 {
